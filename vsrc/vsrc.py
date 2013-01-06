@@ -1,9 +1,6 @@
 #!/usr/bin/env python
-# Version 0.1 written: July 16, 2003
-# Version 1.0 written: July 29, 2009
-# Homepage: http://vsrc.sourceforge.net/
 """
-vsrc.py 1.0 by Ryan Kulla (rkulla AT gmail DOT com).
+vsrc.py by Ryan Kulla (rkulla AT gmail DOT com).
 
 Description: Vsrc finds and displays a module's Python source
              file by searching the Module Search Path, which
@@ -44,7 +41,7 @@ Examples: To seek out the "socket" module's corresponding socket.py
 
 
 __author__ = "Ryan Kulla (rkulla AT gmail DOT com)"
-__version__ = "1.0"
+__version__ = "1.1.0"
 
 
 import os
@@ -54,7 +51,6 @@ import sys
 
 def in_path(what):
     """
-
     Scan the system PATH to see if the file exists there.
     Return the path name of the file if the file exists.
     Return false if the file doesn't' exist.
@@ -85,8 +81,7 @@ def vsrc(module_name=None):
         try:
             mod_path = mod.__file__
         except:
-            sys.stderr.write("No source file found for module: %s\n" %
-                              module_name)
+            sys.stderr.write("No source file found for module: %s\n" % module_name)
             return
 
         # Change .pyc to .py:
@@ -100,8 +95,7 @@ def vsrc(module_name=None):
     try:
         # Use the value of the VSRC_VIEWER environment variable, if it exists:
         viewer_env = os.environ['VSRC_VIEWER']
-        if sys.platform.lower().startswith('win') and not\
-           viewer_env.lower().endswith('.exe'):
+        if sys.platform.lower().startswith('win') and not viewer_env.lower().endswith('.exe'):
             viewer_env += '.exe'
 
         # If not an absolute path, check if it exists in PATH:
@@ -125,7 +119,6 @@ def vsrc(module_name=None):
 
 def get_default_viewer():
     """
-
     If the user has the "less" pager in their PATH, return that.
     Otherwise, return "more".
     """
@@ -142,8 +135,7 @@ def main():
     try:
         vsrc(sys.argv[1])
     except:
-        sys.stderr.write("%s requires one argument (a module name)\n" %
-                          sys.argv[0])
+        sys.stderr.write("%s requires one argument (a module name)\n" % sys.argv[0])
 
 
 if __name__ == '__main__':
