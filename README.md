@@ -57,16 +57,17 @@ Usage
 =====
 Typical usage looks like this::
 
-    Command-line: $ python vsrc.py <module> 
-    Interactive mode: >>> import vsrc
-                    >>> vsrc.vsrc('<module>')
+    Command-line: $ vsrc <module> 
+
+    Interactive mode:   >>> import vsrc
+                        >>> vsrc.vsrc('<module>')
 
 
 Examples
 ========
 To see the "socket" module's corresponding socket.py source file, type::
 
-    $ python vsrc.py socket
+    $ vsrc socket
 
 or from within Python's interactive-mode, type::
 
@@ -78,7 +79,7 @@ be something like /usr/lib/python/socket.py-- and load in your viewer.
 
 To seek out and view Pygame's sprite module's source code, type::
 
-    $ ./vsrc.py pygame.sprite
+    $ vsrc pygame.sprite
 
 or::
 
