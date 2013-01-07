@@ -41,7 +41,7 @@ Examples: To seek out the "socket" module's corresponding socket.py
 
 
 __author__ = "Ryan Kulla (rkulla AT gmail DOT com)"
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 
 import os

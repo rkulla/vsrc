@@ -1,3 +1,4 @@
+v1.1.1, 2013-01-06 - Improved setuptools packaging to extract as module and place cli script in usr bin.
 v1.1.0, 2013-01-06 - Made into a proper cheesecake_index approved package.
 v1.0, 2009-07-30 -- Rewrote to use VSRC_VIEWER env var and to work in MS-Windows.
 v0.1, 2003-07-16 -- Initial release.

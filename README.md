@@ -33,6 +33,25 @@ http://gnuwin32.sourceforge.net/packages/less.htm. If you get the setup
 program it will install less.exe into C:\Program Files\GnuWin32\bin. Make
 sure you add this directory to your Windows %PATH%. 
 
+Installing
+==========
+The preferred way is to use install it from pypi using pip::
+
+    $ pip install vsrc
+
+this way you can install it into any virtualenv's you might have. Or into
+your main python installation (by running: sudo pip install vsrc). And you'll
+also be able to uninstall it with:
+
+    $ pip uninstall vsrc
+
+If you want to run it manually from source code, you can download the tarball
+from pypi or clone from https://github.com/rkulla/vsrc.git and run::
+
+    $ sudo python setup.py install
+
+this will install the command-line script 'vsrc' in your bin directory and it
+will install the vsrc.py module into your dist-packages directory.
 
 Usage
 =====

@@ -1,14 +1,18 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='vsrc',
-    version='1.1.0',
+    version='1.1.1',
     author='Ryan Kulla',
     author_email='rkulla@gmail.com',
-    packages=['vsrc', 'vsrc.test'],
-    url='http://pypi.python.org/pypi/vsrc/',
+    package_dir={'': 'vsrc'},
+    py_modules=['vsrc'],
+    url='https://github.com/rkulla/vsrc',
     license='LICENSE.txt',
     description='Easily find and view a Python module\'s source code',
     long_description=open('README.txt').read(),
+    entry_points={
+        'console_scripts': ['vsrc = vsrc:main'],
+    },
     install_requires=[],
 )
